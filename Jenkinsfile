@@ -433,10 +433,10 @@ pipeline {
                             sh 'docker login -u "\"$USERNAME\"" -p "\"$PASSWORD\"" "$ACR_LOGIN_URL"'
                         }
                      } */
-                      if ((env.DEPLOYMENT_TYPE == 'EC2' || env.DEPLOYMENT_TYPE == 'KUBERNETES' || env.DEPLOYMENT_TYPE == 'OPENSHIFT') && (env.CONTEXT == 'null' || env.CONTEXT == '/')) {
+                      if ((env.CONTEXT == 'null' || env.CONTEXT == '/')) {
                           sh 'docker build -t "$REGISTRY_URL:$BUILD_TAG" -t "$REGISTRY_URL:latest" --build-arg DEFAULT_PORT=$SERVICE_PORT -f DockerfileNoContext .'
                       }
-                      else if ((env.DEPLOYMENT_TYPE == 'EC2' || env.DEPLOYMENT_TYPE == 'KUBERNETES' || env.DEPLOYMENT_TYPE == 'OPENSHIFT') && env.CONTEXT != 'null') {
+                      else if ( env.CONTEXT != 'null') {
                           sh 'docker build -t "$REGISTRY_URL:$BUILD_TAG" -t "$REGISTRY_URL:latest" --build-arg DEFAULT_PORT=$SERVICE_PORT -f Dockerfile .'
                       }
                   }
