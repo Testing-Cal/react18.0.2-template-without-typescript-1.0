@@ -647,7 +647,7 @@ pipeline {
    }
    post {
         always { 
-            sh """ sudo chown -R `id -u`:`id -g` "$WORKSPACE" """
+            sh """ sudo chown -R `id -u`:`id -g` "$WORKSPACE"* """
             pushToCollector()
         }       
         cleanup {
