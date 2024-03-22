@@ -15,10 +15,15 @@ const App = () => {
               <Link to="/" style={{marginRight: '20px'}}>Home1</Link>
               <Link to="/dashboard" style={{marginRight: '20px'}}>Dashboard</Link>
               <Link to="/listing">Listing</Link>
+              <Link to="/dashboard/listing">Listing 1</Link>
           </nav>
           <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard/*" element={<Dashboard />} >
+                    <Route index element={<Home />} />
+                    <Route path='new' element={<Posts />} /> {/*A nested route!*/}
+                    <Route path='listing' element={<Listing />} /> {/*A nested route!*/}
+              </Route>
               <Route path="/listing" element={<Listing />} />
               <Route path="*" element={<PageNotFound />} />
           </Routes>
