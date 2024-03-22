@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Listing = () => {
-  return <h1>This is Listing page</h1>
+  return <div>This is Listing page</div>
 };
 
 export default Listing;
