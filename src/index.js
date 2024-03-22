@@ -21,7 +21,6 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/dashboard/*" element={<Dashboard />} >
                     <Route index element={<Home />} />
-                    <Route path='new' element={<Posts />} /> {/*A nested route!*/}
                     <Route path='listing' element={<Listing />} /> {/*A nested route!*/}
               </Route>
               <Route path="/listing" element={<Listing />} />
