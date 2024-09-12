@@ -15,7 +15,7 @@
     "web-vitals": "^4.2.2"
   },
   "scripts": {
-    "start": "HOST=0.0.0.0 PORT=${port} react-scripts start",
+    "start": "HOST=0.0.0.0 PORT=${3000} react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test src/test/ -u  --env=jsdom --testResultsProcessor ./node_modules/jest-sonar-reporter/index.js --watchAll=false -u",
     "test:coverage": "jest --coverage --config=jest.config.json",
