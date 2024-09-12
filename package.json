@@ -5,12 +5,12 @@
   "private": true,
   "dependencies": {
     "@testing-library/user-event": "^14.4.3",
-    "highcharts": "^11.4.6",
+    "highcharts": "^11.4.8",
     "highcharts-react-official": "^3.2.1",
     "jest-environment-jsdom": "^29.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.25.1",
+    "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^4.2.2"
   },
@@ -23,7 +23,7 @@
     "sonar": "sonar-scanner"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^15.0.0",
     "babel-jest": "^29.7.0",
     "jest-sonar-reporter": "^2.0.0",
